@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace SnakeGame.UI
 {
-    public partial class MainMenu : Form
+    public partial class GameBoard : Form
     {
-        public MainMenu()
+        public GameBoard()
         {
             InitializeComponent();
-        }
-
-        private void MainMenu_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
