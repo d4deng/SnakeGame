@@ -15,7 +15,11 @@ namespace SnakeGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            GlobalConfig.mainMenu = new SnakeGame.UI.MainMenu();
+            GlobalConfig.gameBoard = new SnakeGame.UI.GameBoard();
+            GlobalConfig.hallOfFame = new SnakeGame.UI.HallOfFame();
+            GlobalConfig.endGame = new SnakeGame.UI.EndGame();
+            Application.Run(GlobalConfig.mainMenu);
         }
     }
 }

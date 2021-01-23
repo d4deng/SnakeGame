@@ -43,6 +43,7 @@
             this.StartGameButton.TabIndex = 0;
             this.StartGameButton.Text = "Start Game";
             this.StartGameButton.UseVisualStyleBackColor = false;
+            this.StartGameButton.Click += new System.EventHandler(this.StartGameButton_Click);
             // 
             // HallOfFameButton
             // 
@@ -54,6 +55,7 @@
             this.HallOfFameButton.TabIndex = 1;
             this.HallOfFameButton.Text = "Hall of Fame";
             this.HallOfFameButton.UseVisualStyleBackColor = false;
+            this.HallOfFameButton.Click += new System.EventHandler(this.HallOfFameButton_Click);
             // 
             // Exit
             // 
@@ -65,6 +67,7 @@
             this.Exit.TabIndex = 2;
             this.Exit.Text = "Exit";
             this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // MainMenu
             // 
@@ -76,6 +79,7 @@
             this.Controls.Add(this.StartGameButton);
             this.Name = "MainMenu";
             this.Text = "Main Menu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainMenu_FormClosed);
             this.Load += new System.EventHandler(this.MainMenu_Load);
             this.ResumeLayout(false);
 

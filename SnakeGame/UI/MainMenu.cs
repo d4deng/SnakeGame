@@ -20,5 +20,27 @@ namespace SnakeGame.UI
         {
 
         }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void StartGameButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            GlobalConfig.gameBoard.Visible = true;
+        }
+
+        private void HallOfFameButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+
+            GlobalConfig.hallOfFame.Visible = true;
+        }
+
+        private void MainMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+        }
     }
 }

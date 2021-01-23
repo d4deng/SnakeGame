@@ -42,6 +42,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 600);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // ScoreLabel
             // 
@@ -83,6 +84,7 @@
             this.MainMenuButton.TabIndex = 4;
             this.MainMenuButton.Text = "Main Menu";
             this.MainMenuButton.UseVisualStyleBackColor = false;
+            this.MainMenuButton.Click += new System.EventHandler(this.MainMenuButton_Click);
             // 
             // GameBoard
             // 
@@ -96,6 +98,8 @@
             this.Controls.Add(this.panel1);
             this.Name = "GameBoard";
             this.Text = "GameBoard";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GameBoard_FormClosed);
+            this.Load += new System.EventHandler(this.GameBoard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

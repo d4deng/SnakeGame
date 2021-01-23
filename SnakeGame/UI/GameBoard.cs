@@ -15,5 +15,26 @@ namespace SnakeGame.UI
         {
             InitializeComponent();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void GameBoard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GameBoard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            GlobalConfig.mainMenu.Close();
+        }
+
+        private void MainMenuButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            GlobalConfig.mainMenu.Visible = true;
+        }
     }
 }
