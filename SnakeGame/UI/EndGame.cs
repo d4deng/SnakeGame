@@ -16,6 +16,11 @@ namespace SnakeGame.UI
             InitializeComponent();
         }
 
+        public void SetScoreText(string score)
+        {
+            this.YourScoreTextBox.Text = score;
+        }
+
         private void MainMenuButton_Click(object sender, EventArgs e)
         {
             ModifyHallOfFame();

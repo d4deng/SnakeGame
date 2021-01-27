@@ -28,21 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.ScoreLabel = new System.Windows.Forms.Label();
             this.ScoreTextBox = new System.Windows.Forms.TextBox();
-            this.RestartButton = new System.Windows.Forms.Button();
+            this.StartButton = new System.Windows.Forms.Button();
             this.MainMenuButton = new System.Windows.Forms.Button();
+            this.GamePanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.Location = new System.Drawing.Point(12, 39);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 600);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // ScoreLabel
             // 
@@ -56,23 +47,26 @@
             // 
             // ScoreTextBox
             // 
+            this.ScoreTextBox.Enabled = false;
             this.ScoreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ScoreTextBox.Location = new System.Drawing.Point(79, 6);
             this.ScoreTextBox.Name = "ScoreTextBox";
             this.ScoreTextBox.ReadOnly = true;
             this.ScoreTextBox.Size = new System.Drawing.Size(100, 26);
             this.ScoreTextBox.TabIndex = 2;
+            this.ScoreTextBox.Text = "0";
             // 
-            // RestartButton
+            // StartButton
             // 
-            this.RestartButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.RestartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RestartButton.Location = new System.Drawing.Point(578, 6);
-            this.RestartButton.Name = "RestartButton";
-            this.RestartButton.Size = new System.Drawing.Size(109, 27);
-            this.RestartButton.TabIndex = 3;
-            this.RestartButton.Text = "Restart";
-            this.RestartButton.UseVisualStyleBackColor = false;
+            this.StartButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartButton.Location = new System.Drawing.Point(578, 6);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(109, 27);
+            this.StartButton.TabIndex = 3;
+            this.StartButton.Text = "Start";
+            this.StartButton.UseVisualStyleBackColor = false;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // MainMenuButton
             // 
@@ -86,31 +80,40 @@
             this.MainMenuButton.UseVisualStyleBackColor = false;
             this.MainMenuButton.Click += new System.EventHandler(this.MainMenuButton_Click);
             // 
+            // GamePanel
+            // 
+            this.GamePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GamePanel.Location = new System.Drawing.Point(12, 41);
+            this.GamePanel.Name = "GamePanel";
+            this.GamePanel.Size = new System.Drawing.Size(800, 600);
+            this.GamePanel.TabIndex = 6;
+            // 
             // GameBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 641);
+            this.ClientSize = new System.Drawing.Size(824, 646);
+            this.Controls.Add(this.GamePanel);
             this.Controls.Add(this.MainMenuButton);
-            this.Controls.Add(this.RestartButton);
+            this.Controls.Add(this.StartButton);
             this.Controls.Add(this.ScoreTextBox);
             this.Controls.Add(this.ScoreLabel);
-            this.Controls.Add(this.panel1);
+            this.KeyPreview = true;
             this.Name = "GameBoard";
             this.Text = "GameBoard";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GameBoard_FormClosed);
             this.Load += new System.EventHandler(this.GameBoard_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GameBoard_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label ScoreLabel;
         private System.Windows.Forms.TextBox ScoreTextBox;
-        private System.Windows.Forms.Button RestartButton;
+        private System.Windows.Forms.Button StartButton;
         private System.Windows.Forms.Button MainMenuButton;
+        private System.Windows.Forms.Panel GamePanel;
     }
 }

@@ -35,7 +35,7 @@ namespace SnakeGame.UI
         private void HallOfFameButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-
+            GlobalConfig.hallOfFame.RefreshContent();
             GlobalConfig.hallOfFame.Visible = true;
         }
 
